@@ -25,11 +25,11 @@ public class ServerConfigStarter implements ApplicationListener<ContextRefreshed
 
     private Integer bufferQueueSize;
 
-    private List<Class> classList;
+    private List<String> classList;
 
+    // TODO: 2017/8/7 start the server on application event.
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-
+        System.out.println("hello");
     }
-
 }

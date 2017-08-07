@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/util
+ http://www.springframework.org/schema/util/spring-util-4.3.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+>
+    <bean id="startService" class="com.bruce.ffrpc.server.ServerConfigStarter">
+        <property name="appId" value="hi"/>
+        <property name="group" value="stable"/>
+        <property name="bufferQueueSize" value="200"/>
+        <property name="threadPoolSize" value="100"/>
+        <property name="classList" ref="serviceList"/>
+    </bean>
+
+    <context:component-scan base-package="com.bruce.ffrpc.servertest"/>
+
+    <util:list id="serviceList">
+        <value>"com.bruce.ffrpc.servertest.service.TestService</value>
+    </util:list>
+</beans>
