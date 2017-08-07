@@ -1,19 +1,19 @@
 package com.bruce.ffrpc.servertest.service;
 
+import com.bruce.ffrpc.server.ServiceProvider;
 import com.bruce.ffrpc.servertest.BaseTest;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @Author bruce.ge
  * @Date 2017/8/7
  * @Description
  */
-public class StartTest extends BaseTest{
-    @Autowired
-    private TestService testService;
+public class StartTest extends BaseTest {
     @Test
-    public void test(){
+    public void buildTestServiceInfo() {
+        //make it easy to test.
+        TestService testService = ServiceProvider.getService(TestService.class);
         String say = testService.say();
         System.out.println(say);
     }

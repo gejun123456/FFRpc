@@ -18,6 +18,6 @@ http://www.springframework.org/schema/util
     <context:component-scan base-package="com.bruce.ffrpc.servertest"/>
 
     <util:list id="serviceList">
-        <value>"com.bruce.ffrpc.servertest.service.TestService</value>
+        <value>com.bruce.ffrpc.servertest.service.TestService</value>
     </util:list>
 </beans>
