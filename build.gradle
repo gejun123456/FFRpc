@@ -1,0 +1,30 @@
+group 'com.bruce'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configure(allprojects){project->
+    apply plugin: 'java'
+    def vJavaLang = '1.8'
+    targetCompatibility = vJavaLang
+    sourceCompatibility = vJavaLang
+    dependencies {
+        compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.16.10'
+        compile group: 'org.jetbrains', name: 'annotations', version: '13.0'
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+        compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.6.2'
+        compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.6.2'
+        compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.6.2'
+    }
+}
+
+ext.libraries = [ // Groovy map literal
+                  spring_context: "org.springframework:spring-context:4.3.10.RELEASE"
+]

@@ -1,0 +1,6 @@
+rootProject.name = 'ffrpc-parent'
+include 'ffrcp-server'
+include 'ffrpc-common'
+include 'ffrpc-config'
+include 'ffrpc-client'
+
