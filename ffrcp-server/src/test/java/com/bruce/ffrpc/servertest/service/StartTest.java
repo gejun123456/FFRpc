@@ -11,10 +11,7 @@ import org.junit.Test;
 public class StartTest extends BaseTest {
     @Test
     public void buildTestServiceInfo() {
-        //make it easy to test.
-//        TestService testService = ServiceProvider.getService(TestService.class);
-//        String say = testService.say();
-//        System.out.println(say);
+        // TODO: 2017/8/8 make an netty request to see if the server can handle it.
     }
 
 }
