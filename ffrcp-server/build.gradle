@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     compile libraries.spring_context
+    compile libraries.netty
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.10.RELEASE'
 }

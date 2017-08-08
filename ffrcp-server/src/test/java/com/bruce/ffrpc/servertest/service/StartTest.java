@@ -1,6 +1,5 @@
 package com.bruce.ffrpc.servertest.service;
 
-import com.bruce.ffrpc.server.ServiceProvider;
 import com.bruce.ffrpc.servertest.BaseTest;
 import org.junit.Test;
 
@@ -13,9 +12,9 @@ public class StartTest extends BaseTest {
     @Test
     public void buildTestServiceInfo() {
         //make it easy to test.
-        TestService testService = ServiceProvider.getService(TestService.class);
-        String say = testService.say();
-        System.out.println(say);
+//        TestService testService = ServiceProvider.getService(TestService.class);
+//        String say = testService.say();
+//        System.out.println(say);
     }
 
 }
